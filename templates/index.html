@@ -7,6 +7,24 @@
     <title>Soma</title>
 </head>
 <body>
-    
+
+    <form action="" method="post">
+        <div>
+            <label for="">Número 1</label>    
+            <input type="number" name="num1" required>
+        </div>
+        <div>
+            <label for="">Número 2</label>    
+            <input type="number" name="num2" required>
+        </div>
+        <button type="submit">Somar</button>
+
+        {% if resultado %}
+        <p>resultado= {{resultado}}</p>
+        {% else %}
+        {% endif %}
+
+    </form>
+
 </body>
 </html>
