@@ -5,25 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soma</title>
+    <style>
+        .conteudo {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        .conteudo-bloco {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bloco{
+            display: inline-block;
+        }
+
+        .bloco input {
+            width: 50px;
+            height: 50px;
+            
+        }
+
+        h1 {
+            display: inline;
+            margin: auto 15px;
+        }
+
+        button {
+            display: block;
+            margin: 50px auto;
+        }
+
+        .texto-resultado {
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        .resultado {
+            text-align: center;
+            font-size: 2em;
+        }
+
+    </style>
 </head>
 <body>
 
-    <form action="" method="post">
-        <div>
-            <label for="">Número 1</label>    
-            <input type="number" name="num1" required>
-        </div>
-        <div>
-            <label for="">Número 2</label>    
-            <input type="number" name="num2" required>
-        </div>
-        <button type="submit">Somar</button>
+    <div class="conteudo">
+        <form action="" method="post">
+            <div class="conteudo-bloco">
+                <div class="bloco">  
+                    <input type="number" name="num1" required>
+                </div>
 
-        {% if resultado %}
-        <p>resultado= {{resultado}}</p>
-        {% else %}
-        {% endif %}
+                <h1>+</h1>
 
+                <div class="bloco"> 
+                    <input type="number" name="num2" required>
+                </div>
+            </div>
+            <button type="submit">Somar</button>
+
+            {% if resultado %}
+            <p class="texto-resultado">resultado:</p>
+            <p class="resultado">{{resultado}}</p>
+            {% else %}
+            {% endif %}
+        </div>
     </form>
 
 </body>
